@@ -1,7 +1,7 @@
 
 const Home = () => {
     return (
-        <div>Home</div>
+        <div className='flex min-h-min home-wrapper'>Home</div>
     )
 }
 
