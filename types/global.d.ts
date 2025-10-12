@@ -59,6 +59,12 @@ declare global {
         renderAs?: 'button' | 'text';
         label?: string;
         initialStocks: StockWithWatchlistStatus[];
+        open?: boolean;
+        setOpen?: (open: boolean) => void;
+        // renderAs?: 'button' | 'text';
+        buttonLabel?: string;
+        buttonVariant?: 'primary' | 'secondary';
+        className?: string;
     };
 
     type WelcomeEmailData = {
@@ -168,14 +174,14 @@ declare global {
         news?: MarketNewsArticle[];
     };
 
-    type SearchCommandProps = {
-        open?: boolean;
-        setOpen?: (open: boolean) => void;
-        renderAs?: 'button' | 'text';
-        buttonLabel?: string;
-        buttonVariant?: 'primary' | 'secondary';
-        className?: string;
-    };
+    // type SearchCommandProps = {
+    //     open?: boolean;
+    //     setOpen?: (open: boolean) => void;
+    //     renderAs?: 'button' | 'text';
+    //     buttonLabel?: string;
+    //     buttonVariant?: 'primary' | 'secondary';
+    //     className?: string;
+    // };
 
     type AlertData = {
         symbol: string;

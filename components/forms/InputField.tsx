@@ -12,7 +12,8 @@ const InputField = ({ name, label, placeholder, type='text', register, error, va
                 type={type}
                 id={name}
                 placeholder={placeholder}
-                value={value}
+                // value={value}
+                defaultValue={value}
                 disabled={disabled}
                 className={cn('form-input', {'opacity-50 cursor-not-allowed': disabled})}
                 {...register(name, validation)}

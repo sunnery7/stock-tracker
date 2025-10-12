@@ -38,6 +38,9 @@ const CountrySelect = ({ value, onChange }: { value: string, onChange: (value: s
 
     // Helper function to get flag emoji
     const getFlagEmoji = (countryCode: string) => {
+        if (!/^[A-Za-z]{2}$/.test(countryCode)) {
+            return ''; // or a safe fallback
+        }
         const codePoints = countryCode
             .toUpperCase()
             .split('')

@@ -28,6 +28,7 @@ const SignUp = () => {
     })
 
     const onSubmit = async(data: SignUpFormData) => {
+        console.log('Submitting form data:', data);
         try{
             console.log(data)
         }catch(error){
@@ -58,7 +59,7 @@ const SignUp = () => {
                     placeholder='johndoe@mail.com'
                     register={register}
                     error={errors.email}
-                    validation={{ required:'Email is required', pattern: /^\w+@\w+\.\w+$/, message: 'Email address is required' }}
+                    validation={{ required:'Email is required', pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i, message: 'Email address is required' }}
                 />
 
                 <InputField
