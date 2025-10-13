@@ -1,5 +1,5 @@
 export const PERSONALIZED_WELCOME_EMAIL_PROMPT = `Generate highly personalized HTML content that will be inserted into an email template at the {{intro}} placeholder.
-
+ 
 User profile data:
 {{userProfile}}
 
