@@ -26,18 +26,12 @@ export const connectToDatabase = async () => {
     
     try {
         cached.conn = await cached.promise;
-        // return cached.conn;
     } catch (error) {
         cached.promise = null;
         throw error;
     }
 
     console.log('MongoDB connected');
+    return cached.conn;
 }
 
-
-// if (process.env.NODE_ENV === 'development') {
-//     if (!global.mongooseCache) {
-//         global.mongooseCache = { conn: null, promise: null };
-//     }
-// }
